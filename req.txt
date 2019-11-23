@@ -1,0 +1,8 @@
+go get -v -u github.com/aws/aws-sdk-go
+go get -v gopkg.in/urfave/cli.v1
+go get -v -u github.com/bitly/go-simplejson
+go get -v gopkg.in/AlecAivazis/survey.v1
+go get -v -u github.com/spf13/viper
+go get -v -u github.com/colinmarc/hdfs
+go get -v -u github.com/cheggaaa/pb/v3
+//https://github.com/golang/tools/tree/master/cmd/gomvpkg?

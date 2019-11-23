@@ -1,0 +1,28 @@
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - /home/admin/log/backend.log
+  multiline.pattern: ‘^127.0.0.1 - - \[\d{2}/\w+/\d{4}:\d{2}:\d{2}:\d{2} \+\d{4}\]’
+  multiline.negate: true
+  multiline.match: after
+
+
+processors:
+ - drop_event:
+     when:
+        regexp:
+           message: "^DBG:"
+
+
+# output.elasticsearch:
+#   hosts: [“172.17.164.9:9200”]
+#   index: “backend-%{[beat.version]}-%{+yyyy.MM.dd}”
+
+# setup.kibana:
+#   host: “http://72.17.164.9:5601”
+
+# setup.template:
+#   name: ‘backend’
+#   pattern: ‘backend-*’
+#   enabled: true

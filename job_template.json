@@ -1,0 +1,12 @@
+{
+  "name":"CEVT3",
+  "description":"custom Environment variable test",
+  "docker_image":"hub.xtalpi.cc/atompai/deepsite:v1",
+  "git_url":"git@bitbucket.org:xtalpi/deepsite.git",
+  "git_branch":"multiprocess",
+  "git_commit":"d591dc44b1dbed84625b2395ac5eb067e7e1bdaf",
+  "datasets":"284",
+  "command":"python3 run_test.py",
+  "save_dir":"save",
+  "env":{"TEST":"success"}
+}

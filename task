@@ -1,0 +1,88 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"path"
+	survey "gopkg.in/AlecAivazis/survey.v1"
+	"github.com/spf13/viper"
+)
+
+func check() {
+
+}
+
+func clear() {
+
+}
+
+func create() {
+
+}
+
+func deploy() {
+
+}
+
+func kill() {
+
+}
+
+func logs() {
+
+}
+
+func look() {
+
+}
+
+func ls() {
+
+}
+
+func pack() {
+
+}
+
+func rm() {
+
+}
+
+func run() {
+
+}
+
+func download() {
+
+}
+
+func scp() {
+
+}
+
+func checkVersion() (bool, error) {
+	var confPath string
+	if CUSTOMCONF != "" {
+		confPath = CUSTOMCONF
+	} else {
+		for _, cpath := range CONFPATH {
+			cPathName := path.Join(cpath, CONFNAME)
+			target, err := os.Stat(cPathName)
+			if err != nil {
+				continue
+			}
+			if target.IsDir() {
+				continue
+			}
+			confPath = cPathName
+			break
+		}
+	}
+	if confPath == "" {
+		fmt.Println()
+	}
+
+	return true, nil
+}
+
+
